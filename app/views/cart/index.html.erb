@@ -1,6 +1,10 @@
 <h1>Your Cart</h1>
-<%= link_to 'Empty the Cart', cart_clear_path %>
-<p><br>
+
+<% if @cart.empty? %>
+	Your cart is currency empty
+<% else %>
+	<%= link_to 'Empty the Cart', cart_clear_path %>
+<% end %>
 
 <% total = 0 %>
 
